@@ -18,9 +18,9 @@ How is this distinction meaningful/helpful in the real world?
 
 ## Activity 1
 
-Build out a Computer class. A computer has a brand, screen size, model name, model year. Then, create 2 computers. (15 minutes in breakouts)
+Build out a Computer class. A computer has a brand, screen size, model name, model year. Then, create 2 computers. You can run the tests using the `rspec` command. (15 minutes in breakouts)
 
-come back and expect students to share solution with group.
+When we return, be prepared to share your solution with the group.
 Confirm:
 - Created Instances
 - called setter methods to assign attributes
