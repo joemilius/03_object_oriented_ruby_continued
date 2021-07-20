@@ -1,44 +1,99 @@
-# IntroToObjectOrientedRuby
+# Intro to Object Oriented Ruby
+## 1st Segment - Review of OO basics
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/intro_to_object_oriented_ruby`. To experiment with that code, run `bin/console` for an interactive prompt.
+Review of classes vs instances
 
-TODO: Delete this and the text above, and describe your gem
+Throw out questions:
 
-## Installation
+```rb
+class Computer
+end
 
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'intro_to_object_oriented_ruby'
+computer = Computer.new
 ```
 
-And then execute:
+Which is a class, which is an instance?
 
-    $ bundle install
+How is this distinction meaningful/helpful in the real world?
 
-Or install it yourself as:
+## Activity 1
 
-    $ gem install intro_to_object_oriented_ruby
+Build out a Computer class. A computer has a brand, screen size, model name, model year. Then, create 2 computers. (15 minutes in breakouts)
 
-## Usage
+come back and expect students to share solution with group.
+Confirm:
+- Created Instances
+- called setter methods to assign attributes
 
-TODO: Write usage instructions here
+### What Errors Did you hit?
 
-## Development
+-
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+## Discussion Questions
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+### Why is OO design as popular as it is? 
 
-## Contributing
+#### 2 Situations Where Object Oriented Design is well suited
+>I want to have total control of what my objects look like by updating my class.
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/DakotaLMartinez/intro_to_object_oriented_ruby. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/DakotaLMartinez/intro_to_object_oriented_ruby/blob/master/CODE_OF_CONDUCT.md).
+If I'm building an accounting program where I have very detailed data requirements for:
+- customers
+- invoices 
+- employees 
+- products 
+- inventory 
+
+Object Oriented design would help me clearly define the responsibilities of the different objects in my program and how they are related to other objects in the program. 
+
+### What's another type of application that might lend itself well to an object oriented design? 
+
+#### 2 situations where object oriented design presents obstacles
+>Because I have total control, I don't have the flexibility to change my object's attributes things without changing my class.
+
+If I were building a social media application, being able to iterate quickly and experiment with new features without having to make a more significant commitment to a change is a benefit. If we're in a situation where we're interacting with data from multiple external sources and we don't have control over the attributes present, an object oriented approach.
 
 
-## License
+Take 5 minute break after discussion
 
-The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+## 2nd Segment - Understanding why solution works and Adding Instance Methods
 
-## Code of Conduct
+Discussion of solution to part 1
+- What is an instance method?
+  - Which ones are setter methods? Why?
+  - What ones are getter methods? Why?
+- What makes an instance variable different from a local variable?
+- What's the difference between an instance method and an instance variable?
+- How you call an instance method vs regular method?
+- Spam pry to identify the value of `self`. How is it related here?
 
-Everyone interacting in the IntroToObjectOrientedRuby project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/DakotaLMartinez/intro_to_object_oriented_ruby/blob/master/CODE_OF_CONDUCT.md).
+### Setting up Activity 
+
+Let's build these instance methods together:
+
+- `Computer#asleep` 
+- `Computer#sleep`
+- `Computer#wake_up`
+- `Computer#back_up`
+- `Computer#last_backed_up_at` 
+
+## Activity 2 - build 
+
+In breakout rooms, build an `#about_this_computer` method that returns all the information about the computer as a hash containing the computer's:
+
+- `brand` (string)
+- `screen size` (float)
+- `model name` (string)
+- `model year` (integer)
+- `last backup time` (datetime as string - refer to test code for formatting)
+
+## Segment 3 - Discussion of Object Oriented paradigm
+
+Object Oriented Paradigm sits very well with Relational databases like PostgresQL. Full Stack JS applications can pair well with document based databases like MongoDB. 
+
+## Activity 3 - Group Discussion
+
+What are the benefits of designing our computer class the way that we did?
+
+- background of what we would be able to do
+
+Let's say we've already created 50 computers. if we decide that we need to start keeping track of whether computers are desktops or laptops, what problem would we have to solve?

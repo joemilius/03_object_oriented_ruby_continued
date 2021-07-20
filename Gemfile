@@ -7,3 +7,7 @@ gem "rspec", "~> 3.0"
 
 gem "pry", "~> 0.14.1"
 gem "require_all", "~> 3.0"
+
+gem "timecop", "~> 0.9.4", :group => :test
+
+gem "activesupport", "~> 6.1"
