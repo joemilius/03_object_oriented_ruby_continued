@@ -1,5 +1,5 @@
 require "bundler/setup"
-require "intro_to_object_oriented_ruby"
+require "object_oriented_ruby_continued"
 require "timecop"
 require "active_support"
 
