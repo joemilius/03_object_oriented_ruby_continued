@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 require "bundler/setup"
-require_relative "../lib/intro_to_object_oriented_ruby"
+require_relative "../lib/object_oriented_ruby_continued"
 
 # You can add fixtures and/or initialization code here to make experimenting
 # with your gem easier. You can also use a different console, if you like.
